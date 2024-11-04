@@ -13,7 +13,7 @@ const config: Config = {
         '2xl': '1440px',
       },
       colors: {
-        primary: 'var(--primary)',
+        primary: '#6b4021',
       },
     },
   },
