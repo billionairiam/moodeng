@@ -1,5 +1,8 @@
+'use client';
+
 import Image from 'next/image';
 import clsx from 'clsx';
+import {useCopyToClipboard} from 'usehooks-ts';
 
 import hero from './hero.png';
 import logo from './logo.png';
@@ -9,10 +12,13 @@ import x from './socials/x.png';
 import dex from './socials/dex.png';
 import dexs from './socials/dexs.png';
 import uni from './socials/uni.png';
-import copy from './copy.svg';
+import copyImg from './copy.svg';
 import hamburger from './hamburger.svg';
+import toast from 'react-hot-toast';
 
 export default function Hero() {
+  const [, copy] = useCopyToClipboard();
+
   return (
     <div className='relative'>
       <Image src={hero} fill priority alt='' className='object-cover' />
@@ -118,8 +124,12 @@ export default function Hero() {
                 'px-4',
                 'py-2'
               )}
+              onClick={() => {
+                copy(process.env.NEXT_PUBLIC_COIN_ADDRESS);
+                toast.success('Copied');
+              }}
             >
-              <Image src={copy} alt='' />
+              <Image src={copyImg} alt='' />
               <span>Copy</span>
             </button>
           </div>
