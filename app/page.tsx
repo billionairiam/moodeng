@@ -3,6 +3,7 @@ import clsx from 'clsx';
 
 import Hero from './hero';
 import VideoIntro from './video-intro';
+import Roadmap from './roadmap';
 
 import t1 from './t1.png';
 import t2 from './t2.png';
@@ -25,6 +26,9 @@ export default function Home() {
         </div>
         <div className='mx-5 mt-10 flex justify-center sm:mx-10 lg:mt-20'>
           <VideoIntro />
+        </div>
+        <div className='mx-5 mt-10 flex justify-center sm:mx-10 lg:mt-20'>
+          <Roadmap />
         </div>
       </div>
     </div>
