@@ -1,8 +1,11 @@
 'use client';
 
+import {useState} from 'react';
 import Image from 'next/image';
 import clsx from 'clsx';
 import {useCopyToClipboard} from 'usehooks-ts';
+
+import NavMobile from './nav-mobile';
 
 import hero from './hero.png';
 import logo from './logo.png';
@@ -17,6 +20,8 @@ import hamburger from './hamburger.svg';
 import toast from 'react-hot-toast';
 
 export default function Hero() {
+  const [show, setShow] = useState(false);
+
   const [, copy] = useCopyToClipboard();
 
   return (
@@ -66,9 +71,12 @@ export default function Hero() {
               <span>Uniswap</span>
             </a>
           </div>
-          <button>
-            <Image src={hamburger} height={30} alt='' />
-          </button>
+          <div>
+            <button onClick={() => setShow(true)}>
+              <Image src={hamburger} height={25} alt='' />
+            </button>
+            {show && <NavMobile onClose={() => setShow(false)} />}
+          </div>
         </header>
         <Image
           src={logo2}
