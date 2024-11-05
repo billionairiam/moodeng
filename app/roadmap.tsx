@@ -1,7 +1,10 @@
 import clsx from 'clsx';
 import Image from 'next/image';
 
+import Slider from './slider';
+
 import circle from './circle.svg';
+import coin from './coin.png';
 
 export default function Roadmap() {
   return (
@@ -31,11 +34,11 @@ export default function Roadmap() {
         <div
           className={clsx(
             'font-bold',
-            '*:multi-[flex;items-baseline;gap-5]',
+            '*:multi-[flex;items-baseline;gap-5;z-10;relative]',
             '[&>section>img]:translate-y-1',
             '[&>section>img]:w-[35px] lg:[&>section>img]:w-[40px]',
             '[&>section>img]:hidden sm:[&>section>img]:block',
-            '[&>section>div]:multi-[flex;gap-10]',
+            '[&>section>div]:multi-[flex;gap-10;gap-y-5;overflow-hidden]',
             'lg:[&>section>div]:gap-10',
             '[&>section>div]:flex-col lg:[&>section>div]:flex-row',
             '[&_h4]:multi-[shrink-0;leading-none]',
@@ -47,18 +50,28 @@ export default function Roadmap() {
             'text-[18px]',
             'space-y-10',
             'mt-5',
-            'py-20'
+            'py-10 lg:py-20',
+            'relative isolate',
+            'after:multi-[absolute;left-5;top-0;w-0.5;h-full;bg-white]',
+            'after:bg-[linear-gradient(to_bottom,_#3acfd5_0%,_#3a4ed5_100%)]',
+            'after:hidden sm:after:block'
           )}
         >
           <section>
             <Image src={circle} alt='' />
             <div>
               <h4>Sep 16th, 2024</h4>
-              <div>
+              <div className='overflow-hidden'>
                 <article>
                   Ethereum MOODENG was born at 4:12 am on September 16,
                   2024Total amount: 420.69 billion
                 </article>
+                <br />
+                <Slider
+                  images={Array.from({length: 7}).map(
+                    (_, index) => `/slider-1/s${index + 1}.png`
+                  )}
+                />
               </div>
             </div>
           </section>
@@ -93,8 +106,13 @@ export default function Roadmap() {
                     </a>{' '}
                     to Ukrainian humanitarian organizations.
                   </p>
-                  <p>Even & Donation</p>
+                  <Slider
+                    images={Array.from({length: 5}).map(
+                      (_, index) => `/slider-2/s${index + 1}.jpeg`
+                    )}
+                  />
                   <p>
+                    <span className='block'>Even & Donation</span>
                     Oct 6: $MOODENG airdropped 1.1B tokens (valued at $40K) to
                     Neiro whale holders to strengthen community bonds.
                   </p>
@@ -118,18 +136,24 @@ export default function Roadmap() {
               <div>
                 <article>
                   <h5>The Future and Beyond</h5>
-                  <p>Exchange Listings:</p>
+
                   <p>
+                    <span className='block'>Exchange Listings:</span>
                     In progress, with Bitget onboard; aiming for Binance, OKX,
                     Huobi, Coinbase, and Bybit.
                   </p>
-                  <p>Market Cap Targets:</p>
-                  <p>$500M → $3B → $50B</p>
-                  <p>Wallet Milestones:</p>
-                  <p>Surpassed 10K addresses (achieved); aiming for 500K.</p>
-                  <h5>Vision</h5>
-                  <p>Our goal is to:</p>
+                  <Image src={coin} alt='' />
                   <p>
+                    <span className='block'>Market Cap Targets:</span>
+                    $500M → $3B → $50B
+                  </p>
+                  <p>
+                    <span className='block'>Wallet Milestones:</span>
+                    Surpassed 10K addresses (achieved); aiming for 500K.
+                  </p>
+                  <h5>Vision</h5>
+                  <p>
+                    <span className='block'>Our goal is to:</span>
                     Become the top hippo-themed meme coin. Be listed on all
                     major exchanges.
                   </p>
