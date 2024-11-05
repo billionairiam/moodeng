@@ -5,16 +5,30 @@ import Slider from './slider';
 
 import circle from './circle.svg';
 import coin from './coin.png';
+import img1 from './image-1.png';
+import img2 from './image-2.png';
 
 export default function Roadmap() {
   return (
     <div
       className={clsx(
-        'w-full max-w-[1056px] rounded-md border-white',
+        'w-ful relative max-w-[1056px] overflow-hidden rounded-md border-white contain-layout min-[1420px]:[overflow:revert]',
         'sm:border',
         'sm:p-5 lg:p-10'
       )}
     >
+      <Image
+        src={img1}
+        width={500}
+        alt=''
+        className='absolute -left-24 bottom-0 z-10 hidden w-[400px] rotate-[-46deg] lg:block lg:w-[500px]'
+      />
+      <Image
+        src={img2}
+        width={260}
+        alt=''
+        className='absolute -bottom-10 -right-36 w-[200px] lg:w-[260px]'
+      />
       <div
         className={clsx(
           'bg-[rgba(68,_58,_46,_1)]',
@@ -78,9 +92,9 @@ export default function Roadmap() {
 
           <section>
             <Image src={circle} alt='' />
-            <div>
+            <div className='overflow-hidden'>
               <h4>Oct, 2024</h4>
-              <div>
+              <div className='overflow-hidden'>
                 <article>
                   <h5>Activity</h5>
                   <p>

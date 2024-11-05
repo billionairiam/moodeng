@@ -74,7 +74,7 @@ export default function Slider({images}: {images: string[]}) {
         {images.map((image, index) => (
           <div
             key={index}
-            className='keen-slider__slide aspect-square !w-[95px] shrink-0 cursor-pointer overflow-hidden rounded transition [&.active]:multi-[opacity-50;cursor-default]'
+            className='keen-slider__slide aspect-square !w-[60px] shrink-0 cursor-pointer overflow-hidden rounded transition sm:!w-[95px] [&.active]:multi-[opacity-50;cursor-default]'
           >
             <img
               src={image}
