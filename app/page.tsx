@@ -10,7 +10,7 @@ import t2 from './t2.png';
 
 export default function Home() {
   return (
-    <div className='mx-auto min-h-screen max-w-screen-2xl'>
+    <div className='mx-auto min-h-screen max-w-screen-3xl'>
       <Hero />
       <div className='bg-gra-1 py-10'>
         <div
