@@ -7,6 +7,7 @@ import Roadmap from './roadmap';
 
 import t1 from './t1.png';
 import t2 from './t2.png';
+import mainImg from './main.png';
 
 export default function Home() {
   return (
@@ -24,11 +25,18 @@ export default function Home() {
           <Image src={t1} alt='' />
           <Image src={t2} alt='' />
         </div>
-        <div className='mx-5 mt-10 flex justify-center sm:mx-10 lg:mt-20'>
+        <div className='relative z-10 mx-5 mt-10 flex justify-center sm:mx-10 lg:mt-20'>
           <VideoIntro />
         </div>
-        <div className='mx-5 mt-10 flex justify-center sm:mx-10 lg:mt-20'>
-          <Roadmap />
+        <div className='relative contain-layout'>
+          <Image
+            src={mainImg}
+            alt=''
+            className='absolute top-[-10%] max-h-[75%] w-full object-contain'
+          />
+          <div className='mx-5 mt-10 flex justify-center sm:mx-10 lg:mt-20'>
+            <Roadmap />
+          </div>
         </div>
       </div>
     </div>
