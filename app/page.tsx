@@ -17,7 +17,7 @@ export default function Home() {
       <div className='bg-gra-1 py-10'>
         <div
           className={clsx(
-            'flex items-center justify-center',
+            'relative z-10 flex items-center justify-center',
             '*:multi-[max-w-[min(550px,40%)]]',
             'gap-10 lg:gap-20 xl:gap-32',
             'max-md:multi-[`flex-col;[&>*]:max-w-[90%]`]'
@@ -33,7 +33,7 @@ export default function Home() {
           <Image
             src={mainImg}
             alt=''
-            className='absolute top-[-10%] max-h-[75%] w-full object-contain'
+            className='absolute top-[-10%] max-h-full w-full min-w-[1240px] object-contain'
           />
           <div className='mx-5 mt-10 flex justify-center sm:mx-10 lg:mt-20'>
             <Roadmap />
