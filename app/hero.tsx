@@ -142,7 +142,7 @@ export default function Hero() {
             </button>
           </div>
         </div>
-        <div className={clsx('text-center', 'mt-6')}>
+        <div className={clsx('text-center', 'mt-6 space-y-5')}>
           <h2 className='text-4xl font-extrabold lg:text-[40px]'>
             What is MOODENG?
           </h2>
@@ -150,7 +150,7 @@ export default function Hero() {
             <p className='font-bold'>
               Meet MooDeng, the Iconic Pygmy Hippo Inspiring $MOODENG!
             </p>
-            <p className='lg:px-10'>
+            <p className='mx-auto max-w-screen-xl lg:px-10'>
               {`MooDeng,the bouncy pygmy hippopotamus, was born on July 10, 2024, at the
             Khao Kheow Open Zoo in Thailand. Named by popular vote, "MooDeng"
             means "bouncy pig" or "pork patty," a nod to this lovable hippo's
@@ -160,6 +160,15 @@ export default function Hero() {
             </p>
           </article>
         </div>
+        <h2
+          className={clsx(
+            'mt-5 text-center font-extrabold uppercase',
+            'text-[32px]',
+            'text-gra-2'
+          )}
+        >
+          WE ARE THE MOODENG CTO COMMUNITY!
+        </h2>
       </div>
     </div>
   );

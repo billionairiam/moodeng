@@ -7,6 +7,7 @@ import circle from './circle.svg';
 import coin from './coin.png';
 import img1 from './image-1.png';
 import img2 from './image-2.png';
+import img3 from './image-3.jpeg';
 
 export default function Roadmap() {
   return (
@@ -77,15 +78,27 @@ export default function Roadmap() {
               <h4>Sep 16th, 2024</h4>
               <div className='overflow-hidden'>
                 <article>
-                  Ethereum MOODENG was born at 4:12 am on September 16,
-                  2024Total amount: 420.69 billion
+                  <p>
+                    Ethereum MOODENG was born at 4:12 am on September 16, 2024
+                    <span className='block'>Total amount: 420.69 billion</span>
+                  </p>
+                  <Slider
+                    images={Array.from({length: 7}).map(
+                      (_, index) => `/slider-1/s${index + 1}.png`
+                    )}
+                  />
+                  <p>
+                    September 24 to 26, 2024, volunteers representing the
+                    $MOODENG ETH CTO community visited the home of the baby
+                    hippo, MooDeng, and donated 37,588.2 THB (Thai Baht) to the
+                    zoo.
+                  </p>
+                  <Slider
+                    images={Array.from({length: 5}).map(
+                      (_, index) => `/slider-2/s${index + 1}.jpeg`
+                    )}
+                  />
                 </article>
-                <br />
-                <Slider
-                  images={Array.from({length: 7}).map(
-                    (_, index) => `/slider-1/s${index + 1}.png`
-                  )}
-                />
               </div>
             </div>
           </section>
@@ -99,14 +112,20 @@ export default function Roadmap() {
                   <h5>Activity</h5>
                   <p>
                     $PEPE’s Dev endorsed $MOODENG, boosting interest with{' '}
-                    <a href={process.env.NEXT_PUBLIC_X_URL} target='_blank'>
+                    <a
+                      href='https://x.com/degenharambe/status/1842984613540708518'
+                      target='_blank'
+                    >
                       tweets
                     </a>{' '}
                     about his holdings.
                   </p>
                   <p>
                     Oct 5: Vitalik Buterin{' '}
-                    <a href={process.env.NEXT_PUBLIC_X_URL} target='_blank'>
+                    <a
+                      href='https://etherscan.io/tx/0x1c2c271b8ae7152073f78ee61d5d635c76b2cb74ae6129d7f9ea7cd54fa04454'
+                      target='_blank'
+                    >
                       sold
                     </a>{' '}
                     10.6B $MOODENG tokens, drawing attention and comparisons to
@@ -115,14 +134,17 @@ export default function Roadmap() {
                   <p>
                     Oct 28: Proceeds from Vitalik’s $MOODENG sales (400 ETH)
                     were{' '}
-                    <a href={process.env.NEXT_PUBLIC_X_URL} target='_blank'>
+                    <a
+                      href='https://x.com/vitalikbuterin/status/1843260976206082216'
+                      target='_blank'
+                    >
                       donated
                     </a>{' '}
                     to Ukrainian humanitarian organizations.
                   </p>
                   <Slider
-                    images={Array.from({length: 5}).map(
-                      (_, index) => `/slider-2/s${index + 1}.jpeg`
+                    images={Array.from({length: 10}).map(
+                      (_, index) => `/slider-3/s${index + 1}.jpeg`
                     )}
                   />
                   <p>
@@ -175,6 +197,11 @@ export default function Roadmap() {
                     Bridge Web2 and Web3, positioning $MOODENG to rival $DOGE,
                     $SHIB, and $PEPE, with a DAO-driven charity model enhancing
                     Web3 philanthropy.
+                  </p>
+                  <Image src={img3} alt='' />
+                  <p>
+                    In Vision and Goal, by adding content, we want to become the
+                    new king of memes.
                   </p>
                 </article>
               </div>

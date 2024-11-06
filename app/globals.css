@@ -21,6 +21,12 @@ body {
     -webkit-text-fill-color: transparent;
   }
 
+  .text-gra-2 {
+    background: linear-gradient(90deg, #ffffff 0%, #999999 75.5%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
   .text-sha-1 {
     filter: drop-shadow(0px 6px 4px #000000);
   }
