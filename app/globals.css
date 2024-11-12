@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #6b4021;
+}
+
+body {
+  @apply text-white bg-gra-1;
+}
+
+@layer components {
+  .bg-gra-1 {
+    background-image: linear-gradient(to bottom, var(--primary), #b38d5f);
+  }
+  .text-gra-1 {
+    background: linear-gradient(180deg, #f8ce86 0%, #b6814a 100%),
+      linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gra-2 {
+    background: linear-gradient(90deg, #ffffff 0%, #999999 75.5%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-sha-1 {
+    filter: drop-shadow(0px 6px 4px #000000);
+  }
+
+  .btn-1 {
+    background: linear-gradient(to bottom, #282828, #b6814a);
+  }
+}
