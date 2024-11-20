@@ -168,11 +168,20 @@ export default function Roadmap() {
           <section>
             <Image src={circle} alt='' />
             <div>
-              <h4>Oct, 2024</h4>
-              <div>
+              <h4>Now, 2024</h4>
+              <div className='overflow-hidden'>
                 <article>
-                  <h5>The Future and Beyond</h5>
+                  <p>
+                    Vitalik Buterin, the creator of Ethereum and a
+                    cryptocurrency billionaire, visits Moo Deng
+                  </p>
+                  <Slider
+                    images={Array.from({length: 5}).map(
+                      (_, index) => `/slider-4/s${index + 1}.png`
+                    )}
+                  />
 
+                  <h5>The Future and Beyond</h5>
                   <p>
                     <span className='block'>Exchange Listings:</span>
                     In progress, with MEXC Global, Bitget, Gate.io listed;
