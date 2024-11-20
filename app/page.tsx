@@ -9,6 +9,7 @@ import Partner from './pattern';
 import t1 from './t1.png';
 import t2 from './t2.png';
 import mainImg from './main.png';
+import mailIcon from './mail.png';
 
 export default function Home() {
   return (
@@ -41,6 +42,20 @@ export default function Home() {
         </div>
         <div className='mx-5 mt-10 flex justify-center sm:mx-10 lg:mt-20'>
           <Partner />
+        </div>
+        <div className='mt-10 px-5 text-center'>
+          <a
+            href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}
+            className='flex items-center justify-center gap-2 text-lg'
+          >
+            <Image
+              src={mailIcon}
+              quality={100}
+              alt=''
+              className='size-[34px]'
+            />
+            {process.env.NEXT_PUBLIC_EMAIL}
+          </a>
         </div>
       </div>
     </div>
