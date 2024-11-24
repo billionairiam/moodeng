@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Slider from './slider';
 
 import circle from './circle.svg';
-import coin from './coin.png';
+import dupcard from './dupcard.png';
 import img1 from './image-1.png';
 import img2 from './image-2.png';
 import img3 from './image-3.jpeg';
@@ -181,29 +181,49 @@ export default function Roadmap() {
                     )}
                   />
 
-                  <h5>The Future and Beyond</h5>
-                  <p>
-                    <span className='block'>Exchange Listings:</span>
-                    In progress, with MEXC Global, Bitget, Gate.io listed;
-                    aiming for Binance, OKX, Huobi, Coinbase, and Bybit.
-                  </p>
-                  <Image src={coin} alt='' />
-                  <p>
-                    <span className='block'>Market Cap Targets:</span>
-                    $500M → $3B → $50B
-                  </p>
-                  <p>
-                    <span className='block'>Wallet Milestones:</span>
-                    Surpassed 10K addresses (achieved); aiming for 500K.
-                  </p>
-                  <h5>Vision</h5>
-                  <h5>Our goal is to</h5>
-                  <h5>BECOME THE NEW KING OF MEMES</h5>
-                  <p>
-                    Be listed on all major exchanges. Bridge Web2 and Web3,
-                    positioning $MOODENG to rival $DOGE, $SHIB, and $PEPE, with
-                    a DAO-driven charity model enhancing Web3 philanthropy.
-                  </p>
+                  <Image src={dupcard} alt='' />
+
+                  <h5>Roadmap Highlights:</h5>
+
+                  <ul className='space-y-6'>
+                    <li>
+                      <span className='text-xl'>· Goal</span>: Establish Moodeng
+                      as the Ultimate Meme King, aiming for a 50-billion market
+                      cap.
+                    </li>
+                    <li>
+                      <span className='text-xl'>· Exchange Listings</span>:
+                      Secure listings on reputable exchanges for greater
+                      accessibility.
+                    </li>
+                    <li>
+                      <span className='text-xl'>· Community Engagement</span>:
+                      Build a passionate community with influencer
+                      collaborations.
+                    </li>
+                    <li>
+                      <span className='text-xl'>· Web2-Web3 Integration</span>:
+                      Bridge digital worlds for seamless interaction and
+                      progress.
+                    </li>
+                    <li>
+                      <span className='text-xl'>· Strategic Partnerships</span>:
+                      Partner with leading blockchain projects for growth.
+                    </li>
+                    <li>
+                      <span className='text-xl'>· New Features</span>: Launch a
+                      token dashboard, interactive tools, and more.
+                    </li>
+                    <li>
+                      <span className='text-xl'>· Expanded Use Cases</span>:
+                      Explore utilities in DeFi and NFTs.
+                      <p>
+                        v Dedicate part of our proceeds to wildlife
+                        conservation.
+                      </p>
+                    </li>
+                  </ul>
+
                   <Image src={img3} alt='' />
                 </article>
               </div>
